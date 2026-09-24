@@ -1,0 +1,80 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Frota</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        input{
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 250px;
+        }
+
+        button{
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #0056b3;
+        }
+
+        #preview{
+            margin-top: 10px;
+            font-weight: bold;
+            color: green;
+        }
+
+        #patio{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .carro{
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 200px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .carro:hover{
+            background-color: #d9ecff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gestor de Frota</h1>
+
+    <input type="text" id="marca" placeholder="Digite a marca" onkeyup="mostrarPreview()">
+
+    <input type="text" id="modelo" placeholder="Digite o modelo">
+
+    <input type="number" id="ano" placeholder="Digite o ano">
+
+    <p id="preview"></p>
+
+    <button onclick="fabricarCarro()">Fabricar Carro</button>
+
+    <div id="patio"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
